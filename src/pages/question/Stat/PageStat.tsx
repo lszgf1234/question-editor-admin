@@ -23,13 +23,14 @@ const PageStat: FC<PropsType> = (props: PropsType) => {
   const [pageSize, setPageSize] = useState(STAT_PAGE_SIZE)
   const [total, setTotal] = useState(0)
   const [list, setList] = useState([])
+  // 组件加载后，自动获取数据。依赖项变更后，重新获取数据
   const { loading } = useRequest(
     async () => {
       const res = await getQuestionStatListService(id, { page, pageSize })
       return res
     },
     {
-      refreshDeps: [id, page, pageSize],
+      refreshDeps: [id, page, pageSize], // 依赖项
       onSuccess(res) {
         const { total, list = [] } = res
         setTotal(total)
