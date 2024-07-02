@@ -124,7 +124,7 @@ const EditHeader: FC = () => {
       <div className={styles.header}>
         <div className={styles.left}>
           <Space>
-            <Button type="link" icon={<LeftOutlined />} onClick={() => nav(-1)}>
+            <Button type="link" icon={<LeftOutlined />} onClick={() => nav('/manage/list')}>
               返回
             </Button>
             <TitleElem />

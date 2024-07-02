@@ -38,7 +38,7 @@ const Stat: FC = () => {
             status="warning"
             title="该页面尚未发布"
             extra={
-              <Button type="primary" onClick={() => nav(-1)}>
+              <Button type="primary" onClick={() => nav('/manage/list')}>
                 返回
               </Button>
             }

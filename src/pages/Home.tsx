@@ -11,6 +11,9 @@ const { Title, Paragraph } = Typography
 
 const Home: FC = () => {
   const nav = useNavigate()
+  setTimeout(() => {
+    nav('/question/edit/41000020100322266X')
+  })
 
   // useEffect(() => {
   //   // fetch('/api/test')
