@@ -22,10 +22,10 @@ const Logo: FC = () => {
     <div className={styles.container}>
       <Link to={pathname}>
         <Space>
-          <Title>
+          <Title level={4}>
             <FormOutlined />
           </Title>
-          <Title>小慕问卷</Title>
+          <Title level={4}>问卷编辑器</Title>
         </Space>
       </Link>
     </div>
