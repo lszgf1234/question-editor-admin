@@ -54,9 +54,9 @@ const StatHeader: FC = () => {
   // 使用 useMemo 1. 依赖项是否经常变化; 2. 缓存的元素是否创建成本较高
   const LinkAndQRCodeElem = useMemo(() => {
     if (!isPublished) return null
-
+    console.log('-----------', process.env)
     // 拼接 url ，需要参考 C 端的规则
-    const url = `http://localhost:3000/question/${id}`
+    const url = `${process.env.REACT_APP_HOST_USER}/question/${id}`
 
     // 定义二维码组件
     const QRCodeElem = (
